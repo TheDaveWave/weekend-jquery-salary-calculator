@@ -11,6 +11,25 @@ header {
 }
 
 #tableContainer {
+    margin: 5px;
     background-color: #6B2737;
     color: #fff;
 }
+
+#inputContainer {
+    margin: 5px;
+}
+
+th, td {
+    border: 2px solid #114B5F;
+}
+
+thead {
+    background-color: #456990;
+}
+
+tbody {
+    background-color: #fff;
+    color: #000;
+}
+
