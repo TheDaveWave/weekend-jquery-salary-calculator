@@ -2,9 +2,15 @@ body {
     margin: 0;
     background-color: #E4FDE1;
 }
+
 header {
     border: 1px solid black;
     text-align: center;
     background-color: #114B5F;
+    color: #fff;
+}
+
+#tableContainer {
+    background-color: #6B2737;
     color: #fff;
 }
