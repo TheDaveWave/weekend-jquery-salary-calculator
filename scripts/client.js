@@ -23,7 +23,8 @@ function createEmployee (firstName, lastName, idNumber, jobTitle, annualSalary) 
     return employee;
 }
 
-// function to get the values from the input tags.
+// function to get the values from the input tags, store them in employees, 
+// and empty the values.
 function getInputs () {
     // declare variables and store the value of the inputs in them respectively.
     let firstName = $('#firstNameIn').val();
@@ -42,4 +43,22 @@ function getInputs () {
     $('#idIn').val('');
     $('#titleIn').val('');
     $('#salaryIn').val('');
+}
+
+// function to append the employee objects into the table element on the DOM.
+function appendEmployees () {
+    // declare a variable el (element) to the element of id employeeInfo.
+    let el = $('#employeeInfo');
+
+}
+
+
+// function to add employee objects to employees array for testing other 
+// functions without always using the input fields.
+function testEmployees () {
+    createEmployee('David','Lindberg','1109','Dev','50000');
+    createEmployee('Banana','Fish','1234','Food','25800');
+    createEmployee('Flex','Box','55623','CSS Style','100000');
+    createEmployee('Java','Script','87239','Language','75000');
+    console.log(employees);
 }
