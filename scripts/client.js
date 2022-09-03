@@ -5,7 +5,7 @@ $(readyNow);
 // handle click events as needed.
 function readyNow () {
     $('#submitBtn').on('click', getInputs);
-    $('#employeeInfo').on('click','.employeeRow',deleteEmployee);
+    $('#employeeInfo').on('click','.delBtn',deleteEmployee);
 }
 
 // declare an empty array to store employee objects.
@@ -59,9 +59,10 @@ function appendEmployees () {
     clearEmployeeList();
 
     // loop through the employees array and add employee object to the DOM.
+    // add data-index attr to <tr> to access data later.
     for (let i = 0; i < employees.length; i++) {
         el.append(`
-        <tr data-index="${i}" class="employeeRow">
+        <tr data-index="${i}">
             <td>${employees[i].firstName}</td>
             <td>${employees[i].lastName}</td>
             <td>${employees[i].idNumber}</td>
@@ -81,13 +82,23 @@ function clearEmployeeList () {
 }
 
 // create a function to delete the row containing the employee with the
-// delete button that was clicked.
+// delete button that was clicked. Remove that employee from the employees list.
 function deleteEmployee (event) {
     // set variable to reference to the closest parent <tr> of the button 
     // that was clicked.
     let el = $(event.target).closest('tr');
+    // get the row number of the row to be removed.
+    let rowNum = el.data('index');
+
+    // remove the employee object from the employees array.
+    employees.splice(rowNum, 1);
+    // console.log(employees);
+    
+    // re-append the data to the DOM.
+    appendEmployees();
+
     // remove parent row.
-    el.remove();
+        // el.remove();
 }
 
 
