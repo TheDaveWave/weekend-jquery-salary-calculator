@@ -11,6 +11,15 @@ function readyNow () {
 // declare an empty array to store employee objects.
 let employees = [];
 
+// setup format for currency.
+const formatCur = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+});
+  
+
 // function to create an employee object, push it into the array of employees, 
 // and return the employee object.
 function createEmployee (firstName, lastName, idNumber, jobTitle, annualSalary) {
@@ -66,7 +75,7 @@ function appendEmployees () {
             <td>${employees[i].lastName}</td>
             <td>${employees[i].idNumber}</td>
             <td>${employees[i].jobTitle}</td>
-            <td>${employees[i].annualSalary}</td>
+            <td>${formatCur.format(employees[i].annualSalary)}</td>
             <td><button class="delBtn">Delete</button></td>
         </tr>`);
     }
@@ -108,7 +117,7 @@ function monthlyCost () {
     // console.log('Total cost',cost);
 
     // display cost on the DOM.
-    el.text(`${cost}`);
+    el.text(`${formatCur.format(cost)}`);
 
     // check to see if the cost is greater than 20,000
     // if true make background of cost red.
