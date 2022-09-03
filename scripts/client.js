@@ -59,14 +59,14 @@ function appendEmployees () {
     clearEmployeeList();
 
     // loop through the employees array and add employee object to the DOM.
-    for (const employee of employees) {
+    for (let i = 0; i < employees.length; i++) {
         el.append(`
-        <tr class="employeeRow">
-            <td>${employee.firstName}</td>
-            <td>${employee.lastName}</td>
-            <td>${employee.idNumber}</td>
-            <td>${employee.jobTitle}</td>
-            <td>${employee.annualSalary}</td>
+        <tr data-index="${i}" class="employeeRow">
+            <td>${employees[i].firstName}</td>
+            <td>${employees[i].lastName}</td>
+            <td>${employees[i].idNumber}</td>
+            <td>${employees[i].jobTitle}</td>
+            <td>${employees[i].annualSalary}</td>
             <td><button class="delBtn">Delete</button></td>
         </tr>`);
     }
