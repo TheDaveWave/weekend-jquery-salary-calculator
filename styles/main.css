@@ -63,12 +63,22 @@ th, td {
     border: 2px solid #114B5F;
 }
 
+tr {
+    text-align: center;
+}
+
 tr:nth-child(even) {
     background-color: #ddd;
 }
 
 thead {
     background-color: #456990;
+}
+
+tfoot {
+    text-align: center;
+    background-color: #456990;
+    color: #fff;
 }
 
 tbody {
@@ -91,11 +101,9 @@ table {
 
 @keyframes highCost {
     from {
-        background-color: none;
-        color: #000;
+        background-color: #456990;
     }
     to {
         background-color: red;
-        color: #fff;
     }
 }
