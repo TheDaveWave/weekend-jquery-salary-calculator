@@ -71,6 +71,8 @@ function appendEmployees () {
             <td><button class="delBtn">Delete</button></td>
         </tr>`);
     }
+    // call monthlyCost()
+    monthlyCost();
 }
 
 // function to remove the list of employees on the DOM.
@@ -98,6 +100,20 @@ function deleteEmployee (event) {
     appendEmployees();
 }
 
+// get the total monthly cost of the employees on the list.
+// if the monthly cost exceeds 20,000 add a red background to cost.
+function monthlyCost () {
+    let el = $('#monthlyCost');
+    let cost = 0;
+    // loop through the employees array and add up the total annual salary.
+    for (const employee of employees) {
+        cost += employee.annualSalary;
+    }
+    // divide the sum of the annual salary's by 12 to get cost per month.
+    cost /= 12;
+    console.log('Total cost',cost);
+    return cost;
+}
 
 // function to add employee objects to employees array for testing other 
 // functions without always using the input fields.
