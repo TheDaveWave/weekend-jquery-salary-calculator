@@ -29,3 +29,24 @@ function createEmployee (firstName, lastName, idNumber, jobTitle, annualSalary) 
     employees.push(employee);
     return employee;
 }
+
+// function to get the values from the input tags.
+function getInputs () {
+    // declare variables and store the value of the inputs in them respectively.
+    let firstName = $('firstNameIn').val();
+    let lastName = $('lastNameIn').val();
+    let idNumber = $('idIn').val(); // make a number later maybe?
+    let jobTitle = $('titleIn').val();
+    let annualSalary = $('salaryIn').val(); // make a number later maybe?
+
+    // calle the createEmployee function using the input values.
+    createEmployee(firstName,lastName,idNumber,jobTitle,annualSalary);
+    console.log(employees);
+
+    // empty out the values in the input fields.
+    $('firstNameIn').val('');
+    $('lastNameIn').val('');
+    $('idIn').val('');
+    $('titleIn').val('');
+    $('salaryIn').val('');
+}
