@@ -60,13 +60,13 @@ function appendEmployees () {
     // loop through the employees array and add employee object to the DOM.
     for (const employee of employees) {
         el.append(`
-        <tr>
+        <tr class="employeeRow">
             <td>${employee.firstName}</td>
             <td>${employee.lastName}</td>
             <td>${employee.idNumber}</td>
             <td>${employee.jobTitle}</td>
             <td>${employee.annualSalary}</td>
-            <td><button>Delete</button></td>
+            <td><button class="delBtn">Delete</button></td>
         </tr>`);
     }
 }
@@ -77,6 +77,12 @@ function clearEmployeeList () {
     let el = $('#employeeInfo');
     // remove the children elements of the table.
     el.children().remove();
+}
+
+// create a function to delete the row containing the employee with the
+// delete button that was clicked.
+function deleteEmployee (event) {
+    $(event.target).remove();
 }
 
 
