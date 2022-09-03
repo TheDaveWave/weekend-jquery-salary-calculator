@@ -54,9 +54,8 @@ function appendEmployees () {
     // declare a variable el (element) to the element of id employeeInfo.
     let el = $('#employeeInfo');
 
-    // call clearEmployeeList to clear the list before appending the 
-    // updated list of employee objects.
-    clearEmployeeList();
+    // clear the list from the DOM.
+    el.empty();
 
     // loop through the employees array and add employee object to the DOM.
     // add data-index attr to <tr> to access data later.
@@ -73,14 +72,6 @@ function appendEmployees () {
     }
     // call monthlyCost()
     monthlyCost();
-}
-
-// function to remove the list of employees on the DOM.
-function clearEmployeeList () {
-    // declare a variable el (element) to the element of id employeeInfo.
-    let el = $('#employeeInfo');
-    // remove the children elements of the table.
-    el.empty();
 }
 
 // create a function to delete the row containing the employee with the
@@ -109,11 +100,13 @@ function monthlyCost () {
     for (const employee of employees) {
         cost += employee.annualSalary;
     }
-    console.log('Combined salary',cost);
+    // console.log('Combined salary',cost);
+
     // divide the sum of the annual salary's by 12 to get cost per month.
     cost /= 12;
     cost = Math.round(cost);
-    console.log('Total cost',cost);
+    // console.log('Total cost',cost);
+
     // display cost on the DOM.
     el.text(`${cost}`);
     
@@ -123,10 +116,10 @@ function monthlyCost () {
 // function to add employee objects to employees array for testing other 
 // functions without always using the input fields.
 function testEmployees () {
-    createEmployee('David','Lindberg','1109','Dev','50000');
-    createEmployee('Banana','Fish','1234','Food','25800');
-    createEmployee('Flex','Box','55623','CSS Style','100000');
-    createEmployee('Java','Script','87239','Language','75000');
+    createEmployee('David','Lindberg','1109','Dev',Number('50000'));
+    createEmployee('Banana','Fish','1234','Food',Number('25800'));
+    createEmployee('Flex','Box','55623','CSS Style',Number('100000'));
+    createEmployee('Java','Script','87239','Language',Number('75000'));
     console.log(employees);
     appendEmployees();
 }
