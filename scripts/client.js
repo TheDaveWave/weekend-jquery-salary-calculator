@@ -36,7 +36,7 @@ function getInputs () {
 
     // call the createEmployee function using the input values.
     createEmployee(firstName,lastName,idNumber,jobTitle,annualSalary);
-    console.log(employees);
+    // console.log(employees);
 
     // empty out the values in the input fields.
     $('#firstNameIn').val('');
@@ -109,6 +109,14 @@ function monthlyCost () {
 
     // display cost on the DOM.
     el.text(`${cost}`);
+
+    // check to see if the cost is greater than 20,000
+    // if true make background of cost red.
+    if(cost > 20000) {
+        el.css({'background-color':'red','color':'#fff'});
+    } else if (cost <= 20000) {
+        el.css({'background-color':'','color':'#000'});
+    }
     
     return cost;
 }
