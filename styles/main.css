@@ -26,7 +26,7 @@ h4 {
 }
 
 #inputDiv {
-    background-color: darkgray;
+    background-color: rgba(169, 169, 169, 0.383);
     height: 120px;
     margin: 0 9%;
     border: 1px solid #000;
@@ -89,3 +89,13 @@ table {
     margin: 0% 1.25%;
 }
 
+@keyframes highCost {
+    from {
+        background-color: none;
+        color: #000;
+    }
+    to {
+        background-color: red;
+        color: #fff;
+    }
+}

@@ -136,9 +136,9 @@ function monthlyCost () {
     // check to see if the cost is greater than 20,000
     // if true make background of cost red.
     if(cost > 20000) {
-        el.css({'background-color':'red','color':'#fff'});
+        el.css('animation', 'highCost 2s linear alternate infinite');
     } else if (cost <= 20000) {
-        el.css({'background-color':'','color':'#000'});
+        el.css('animation', '');
     }
     
     return cost;
