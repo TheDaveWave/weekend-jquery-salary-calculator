@@ -50,6 +50,18 @@ function appendEmployees () {
     // declare a variable el (element) to the element of id employeeInfo.
     let el = $('#employeeInfo');
 
+    // loop through the employees array and add employee object to the DOM.
+    for (const employee of employees) {
+        el.append(`
+        <tr>
+            <td>${employee.firstName}</td>
+            <td>${employee.lastName}</td>
+            <td>${employee.idNumber}</td>
+            <td>${employee.jobTitle}</td>
+            <td>${employee.annualSalary}</td>
+            <td><button>Delete</button></td>
+        </tr>`);
+    }
 }
 
 
