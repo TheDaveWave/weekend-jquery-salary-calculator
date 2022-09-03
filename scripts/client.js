@@ -43,12 +43,19 @@ function getInputs () {
     $('#idIn').val('');
     $('#titleIn').val('');
     $('#salaryIn').val('');
+
+    // call appendEmployees()
+    appendEmployees();
 }
 
 // function to append the employee objects into the table element on the DOM.
 function appendEmployees () {
     // declare a variable el (element) to the element of id employeeInfo.
     let el = $('#employeeInfo');
+
+    // call clearEmployeeList to clear the list before appending the 
+    // updated list of employee objects.
+    clearEmployeeList();
 
     // loop through the employees array and add employee object to the DOM.
     for (const employee of employees) {
@@ -62,6 +69,14 @@ function appendEmployees () {
             <td><button>Delete</button></td>
         </tr>`);
     }
+}
+
+// function to remove the list of employees on the DOM.
+function clearEmployeeList () {
+    // declare a variable el (element) to the element of id employeeInfo.
+    let el = $('#employeeInfo');
+    // remove the children elements of the table.
+    el.children().remove();
 }
 
 
