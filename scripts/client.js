@@ -41,11 +41,11 @@ function getInputs () {
     // declare variables and store the value of the inputs in them respectively.
     let firstName = $('#firstNameIn').val();
     let lastName = $('#lastNameIn').val();
-    let idNumber = $('#idIn').val(); // make a number later maybe?
+    let idNumber = Number($('#idIn').val());
     let jobTitle = $('#titleIn').val();
-    let annualSalary = $('#salaryIn').val(); // make a number later maybe?
+    let annualSalary = Number($('#salaryIn').val());
 
-    // calle the createEmployee function using the input values.
+    // call the createEmployee function using the input values.
     createEmployee(firstName,lastName,idNumber,jobTitle,annualSalary);
     console.log(employees);
 
