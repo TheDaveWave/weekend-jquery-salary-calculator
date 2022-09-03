@@ -93,12 +93,9 @@ function deleteEmployee (event) {
     // remove the employee object from the employees array.
     employees.splice(rowNum, 1);
     // console.log(employees);
-    
+
     // re-append the data to the DOM.
     appendEmployees();
-
-    // remove parent row.
-        // el.remove();
 }
 
 
