@@ -5,6 +5,7 @@ $(readyNow);
 // handle click events as needed.
 function readyNow () {
     $('#submitBtn').on('click', getInputs);
+    $('#clearBtn').on('click',clearEmployees);
     $('#employeeInfo').on('click','.delBtn',deleteEmployee);
 }
 
@@ -97,6 +98,14 @@ function deleteEmployee (event) {
     // console.log(employees);
 
     // re-append the data to the DOM.
+    appendEmployees();
+}
+
+// clear all employees off the DOM and remove them from the employees array.
+function clearEmployees () {
+    let el = $('#employeeInfo');
+    el.empty()
+    employees = [];
     appendEmployees();
 }
 
