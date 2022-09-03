@@ -77,7 +77,7 @@ function clearEmployeeList () {
     // declare a variable el (element) to the element of id employeeInfo.
     let el = $('#employeeInfo');
     // remove the children elements of the table.
-    el.children().remove();
+    el.empty();
 }
 
 // create a function to delete the row containing the employee with the
