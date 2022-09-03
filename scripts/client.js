@@ -5,6 +5,7 @@ $(readyNow);
 // handle click events as needed.
 function readyNow () {
     $('#submitBtn').on('click', getInputs);
+    $('#employeeInfo').on('click','.employeeRow',deleteEmployee);
 }
 
 // declare an empty array to store employee objects.
@@ -82,7 +83,11 @@ function clearEmployeeList () {
 // create a function to delete the row containing the employee with the
 // delete button that was clicked.
 function deleteEmployee (event) {
-    $(event.target).remove();
+    // set variable to reference to the closest parent <tr> of the button 
+    // that was clicked.
+    let el = $(event.target).closest('tr');
+    // remove parent row.
+    el.remove();
 }
 
 
@@ -94,4 +99,5 @@ function testEmployees () {
     createEmployee('Flex','Box','55623','CSS Style','100000');
     createEmployee('Java','Script','87239','Language','75000');
     console.log(employees);
+    appendEmployees();
 }
