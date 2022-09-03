@@ -2,8 +2,9 @@
 
 $(readyNow);
 
+// handle click events as needed.
 function readyNow () {
-
+    $('#submitBtn').on('click', getInputs);
 }
 
 // declare an empty array to store employee objects.
