@@ -44,10 +44,15 @@ function getInputs () {
     let jobTitle = $('#titleIn').val();
     let annualSalary = Number($('#salaryIn').val());
 
-    // call the createEmployee function using the input values.
+    // create an if statement to check if inputs are empty and if true alert.
+    if (firstName === '' || lastName === '' || idNumber === '' || jobTitle === '' || annualSalary === '') {
+        alert('Please fill in all inputs.');
+    } else {
+           // call the createEmployee function using the input values.
     createEmployee(firstName,lastName,idNumber,jobTitle,annualSalary);
     // console.log(employees);
-
+    }
+ 
     // empty out the values in the input fields.
     $('#firstNameIn').val('');
     $('#lastNameIn').val('');
