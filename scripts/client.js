@@ -109,9 +109,14 @@ function monthlyCost () {
     for (const employee of employees) {
         cost += employee.annualSalary;
     }
+    console.log('Combined salary',cost);
     // divide the sum of the annual salary's by 12 to get cost per month.
     cost /= 12;
+    cost = Math.round(cost);
     console.log('Total cost',cost);
+    // display cost on the DOM.
+    el.text(`${cost}`);
+    
     return cost;
 }
 
