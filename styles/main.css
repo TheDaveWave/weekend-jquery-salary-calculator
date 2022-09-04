@@ -11,7 +11,8 @@ header {
 }
 
 h3 {
-    margin-left: 6%;
+    text-align: left;
+    margin: 10px 18%;
 }
 
 h4 {
@@ -19,6 +20,7 @@ h4 {
 }
 
 #tableContainer {
+    text-align: center;
     margin: 5px;
     padding: 5px;
     /* background-color: #6B2737; */
@@ -26,6 +28,7 @@ h4 {
 }
 
 #inputContainer {
+    text-align: center;
     margin: 5px;
 }
 
@@ -42,6 +45,7 @@ h4 {
 }
 
 input {
+    text-align: left;
     outline: 0;
     border: 0;
     background-color: transparent;
@@ -64,8 +68,9 @@ input:focus::placeholder {
 }
 
 #btnContainer {
+    text-align: left;
     /* margin-top: 5px; */
-    margin: 5px 6%;
+    margin: 5px 18.5%;
 }
 
 th, td {
