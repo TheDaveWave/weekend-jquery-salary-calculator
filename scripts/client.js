@@ -19,7 +19,7 @@ const formatCur = new Intl.NumberFormat("en-US", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2
 });
-  
+
 
 // function to create an employee object, push it into the array of employees, 
 // and return the employee object.
@@ -143,6 +143,9 @@ function monthlyCost () {
     
     return cost;
 }
+
+// maybe make it so you can edit the annual salary without deleting an employee.
+
 
 // function to add employee objects to employees array for testing other 
 // functions without always using the input fields.
