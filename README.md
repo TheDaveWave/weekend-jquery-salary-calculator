@@ -31,4 +31,4 @@ notifying the user that the cost is too high.
 Thanks to [Emerging Digital Academy](https://emergingacademy.org/) for supplying me with the resources to complete this project.
 
 ## Support
-If you have any questions, suggestions, or issues, please email me at [david.wesley.lindberg@gmail.com](www.google.com)
+If you have any questions, suggestions, or issues, please email me at [david.wesley.lindberg@gmail.com](david.wesley.lindberg@gmail.com)
